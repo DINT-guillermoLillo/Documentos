@@ -19,18 +19,23 @@ namespace Documentos
     /// </summary>
     public partial class Configuracion : Window
     {
-        public int Height { get; set; }
-        public int Width { get; set; }
+        public int Altura { get; set; }
+        public int Anchura { get; set; }
 
         public Configuracion()
         {
             InitializeComponent();
+
+            Altura = 500;
+            Anchura = 500;
+
+            this.DataContext = this;
         }
 
         private void aceptarButton_Click(object sender, RoutedEventArgs e)
         {
-            Height = int.Parse(Alto.Text);
-            Width = int.Parse(Ancho.Text);
+            Altura = int.Parse(altoTextBox.Text);
+            Anchura = int.Parse(anchoTextBox.Text);
 
             this.Close();
         }

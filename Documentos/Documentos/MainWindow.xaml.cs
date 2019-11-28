@@ -20,6 +20,8 @@ namespace Documentos
     /// </summary>
     public partial class MainWindow : Window
     {
+        Configuracion conf = new Configuracion();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -31,22 +33,23 @@ namespace Documentos
 
             //Establecemos la nueva ventana como un ventana hija
             doc.Owner = this;
+                doc.Width = conf.Anchura;
+                doc.Height = conf.Altura;
+                
 
             doc.Show();
         }
 
         private void configuracionButton_Click(object sender, RoutedEventArgs e)
         {
-            Configuracion conf = new Configuracion();
-
             //Establecemos la nueva ventana como un ventana hija
             conf.Owner = this;
                 //Asignamos sus propiedades
                 conf.SizeToContent = SizeToContent.WidthAndHeight;
                 conf.ResizeMode = ResizeMode.NoResize;
-                conf.ShowInTaskbar = false;
+                conf.ShowInTaskbar = false; 
 
-            conf.Show();
+            conf.ShowDialog();
         }
     }
 }

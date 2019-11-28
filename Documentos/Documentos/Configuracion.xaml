@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Configuración" Height="148.5" MinWidth="276.5" Topmost="True">
     <StackPanel>
-        <Grid>
+        <Grid x:Name="configuracionmainGrid">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
@@ -18,10 +18,10 @@
             </Grid.RowDefinitions>
 
             <TextBlock Margin="5" Grid.Column="0" Grid.Row="0">Ancho</TextBlock>
-            <TextBox x:Name="Ancho" Margin="5" Grid.Column="1" Grid.Row="0">500</TextBox>
+            <TextBox x:Name="anchoTextBox" Margin="5" Grid.Column="1" Grid.Row="0" Text="{Binding Altura}"></TextBox>
 
             <TextBlock Margin="5" Grid.Column="0" Grid.Row="1">Alto</TextBlock>
-            <TextBox x:Name="Alto" Margin="5" Grid.Column="1" Grid.Row="1">500</TextBox>
+            <TextBox x:Name="altoTextBox" Margin="5" Grid.Column="1" Grid.Row="1" Text="{Binding Anchura}"></TextBox>
         </Grid>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
             <Button Margin="5" Click="aceptarButton_Click">Aceptar</Button>

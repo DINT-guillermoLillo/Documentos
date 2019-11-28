@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:Documentos"
         mc:Ignorable="d"
         Title="Documento" Height="450" Width="800">
-    <StackPanel>
-        <TextBox></TextBox>
-        <Button>Guadar</Button>
-    </StackPanel>
+    <DockPanel>
+        <Button Margin="12" DockPanel.Dock="Bottom" Click="guardarButton_Click">Guadar</Button>
+        <TextBox x:Name="textoTextBox"></TextBox>
+    </DockPanel>
 </Window>
