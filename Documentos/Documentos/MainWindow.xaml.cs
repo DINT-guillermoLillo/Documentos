@@ -40,6 +40,7 @@ namespace Documentos
             doc.Show();
         }
 
+
         private void configuracionButton_Click(object sender, RoutedEventArgs e)
         {
             //Establecemos la nueva ventana como un ventana hija
@@ -48,7 +49,7 @@ namespace Documentos
                 conf.SizeToContent = SizeToContent.WidthAndHeight;
                 conf.ResizeMode = ResizeMode.NoResize;
                 conf.ShowInTaskbar = false; 
-
+                
             conf.ShowDialog();
         }
     }

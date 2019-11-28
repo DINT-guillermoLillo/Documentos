@@ -23,9 +23,10 @@ namespace Documentos
     {
         public Documento()
         {
-            InitializeComponent();
-            
+            InitializeComponent();   
         }
+
+
 
         private void guardarButton_Click(object sender, RoutedEventArgs e)
         {
@@ -36,6 +37,16 @@ namespace Documentos
 
             if (saveFileDialog.ShowDialog() == true)
                 File.WriteAllText(saveFileDialog.FileName, textoTextBox.Text);
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            MessageBoxResult result= MessageBox.Show("¿Seguro que quieres cerrar?", "Cerrar", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.Yes)
+                e.Cancel = false;
+            else
+                e.Cancel = true;
         }
     }
 }
