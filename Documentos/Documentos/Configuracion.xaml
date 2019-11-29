@@ -18,14 +18,14 @@
             </Grid.RowDefinitions>
 
             <TextBlock Margin="5" Grid.Column="0" Grid.Row="0">Ancho</TextBlock>
-            <TextBox x:Name="anchoTextBox" Margin="5" Grid.Column="1" Grid.Row="0" Text="{Binding Altura}"></TextBox>
+            <TextBox x:Name="anchoTextBox" Margin="5" Grid.Column="1" Grid.Row="0" Text="{Binding RelativeSource={RelativeSource AncestorType=local:Configuracion},Path=Anchura}"></TextBox>
 
             <TextBlock Margin="5" Grid.Column="0" Grid.Row="1">Alto</TextBlock>
-            <TextBox x:Name="altoTextBox" Margin="5" Grid.Column="1" Grid.Row="1" Text="{Binding Anchura}"></TextBox>
+            <TextBox x:Name="altoTextBox" Margin="5" Grid.Column="1" Grid.Row="1" Text="{Binding RelativeSource={RelativeSource AncestorType=local:Configuracion},Path=Altura}"></TextBox>
         </Grid>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Margin="5" Click="aceptarButton_Click">Aceptar</Button>
-            <Button Margin="5" Click="cancelarButton_Click">Cancelar</Button>
+            <Button Margin="5" Click="aceptarButton_Click" IsDefault="True">Aceptar</Button>
+            <Button Margin="5" Click="cancelarButton_Click" IsCancel="True">Cancelar</Button>
         </StackPanel>
     </StackPanel>
 </Window>

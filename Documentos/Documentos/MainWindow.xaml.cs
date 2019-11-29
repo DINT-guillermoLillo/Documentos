@@ -41,6 +41,7 @@ namespace Documentos
         }
 
 
+
         private void configuracionButton_Click(object sender, RoutedEventArgs e)
         {
             //Establecemos la nueva ventana como un ventana hija

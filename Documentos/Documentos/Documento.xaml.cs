@@ -43,9 +43,7 @@ namespace Documentos
         {
             MessageBoxResult result= MessageBox.Show("¿Seguro que quieres cerrar?", "Cerrar", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
-            if (result == MessageBoxResult.Yes)
-                e.Cancel = false;
-            else
+            if (result == MessageBoxResult.No)
                 e.Cancel = true;
         }
     }

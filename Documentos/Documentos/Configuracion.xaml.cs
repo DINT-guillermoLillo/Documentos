@@ -28,8 +28,6 @@ namespace Documentos
 
             Altura = 500;
             Anchura = 500;
-
-            this.DataContext = this;
         }
 
         private void aceptarButton_Click(object sender, RoutedEventArgs e)
